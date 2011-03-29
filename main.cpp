@@ -350,7 +350,6 @@ int main( int argc, char* argv[] )
         {
             if( !points[0].empty()  )
             {
-                //光流法跟踪关键点
                 //Track the keypoints based on the lk optic flow algorithm
                 vector<uchar> status;
                 vector<float> err;
@@ -368,7 +367,6 @@ int main( int argc, char* argv[] )
                 const float errMin=25;
                 for( i = k = 0; i < points[1].size(); i++ )
                 {
-                    //两种情况需要排除关键点，跟踪状态不佳，跟踪前后区域变化太少
                     //criteria to get rid of Tracked points: status are not so good, or the changes are too small
                     if( !status[i] || err[i]<errMin)
                         continue;
