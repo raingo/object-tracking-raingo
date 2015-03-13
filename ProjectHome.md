@@ -1,0 +1,1 @@
+Object tracking is a common visual problem in many field of computer science. Many researches have been done on this problem, and the aim of this project is to implement some them based on OpenCV.
